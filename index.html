@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emrecan45 - Games</title>
+<meta name="description" content="Indie games by Emrecan45. Play them right in your browser.">
+<link rel="icon" href="https://github.com/Emrecan45.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341302313151709" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --bg: #0b0d12;
+        --bg2: #11141c;
+        --card: rgba(255, 255, 255, 0.04);
+        --border: rgba(255, 255, 255, 0.09);
+        --text: #f2f3f7;
+        --muted: #969cad;
+        --accent: #6d8bff;
+        --accent2: #a06bff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .glow {
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background:
+            radial-gradient(600px 400px at 15% -5%, rgba(109, 139, 255, 0.18), transparent 60%),
+            radial-gradient(700px 500px at 90% 0%, rgba(160, 107, 255, 0.16), transparent 60%);
+    }
+
+    .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 22px 80px; }
+
+    header { display: flex; align-items: center; gap: 14px; padding: 26px 2px; }
+    header .me { display: flex; align-items: center; gap: 13px; }
+    header img { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border); }
+    header .who { line-height: 1.25; }
+    header .who b { font-weight: 700; font-size: 17px; }
+    header .who span { display: block; color: var(--muted); font-size: 13px; }
+    header .spacer { flex: 1; }
+    header .nav-btn {
+        font-size: 14px; color: var(--muted); padding: 8px 15px; border-radius: 10px;
+        border: 1px solid var(--border); transition: 0.15s; cursor: pointer;
+        background: none; font-family: inherit;
+    }
+    header .nav-btn:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
+
+    .hero { padding: 40px 0 30px; }
+    .hero h1 {
+        font-size: clamp(34px, 6vw, 60px); font-weight: 800; letter-spacing: -1.5px;
+        margin: 0 0 14px; line-height: 1.05;
+        background: linear-gradient(120deg, #fff 30%, #9fb4ff 70%, #c9a9ff);
+        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 18px; color: var(--muted); margin: 0; max-width: 560px; line-height: 1.6; }
+
+    .grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 22px; margin-top: 36px;
+    }
+
+    .game {
+        position: relative; display: flex; flex-direction: column;
+        background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+        overflow: hidden; transition: 0.18s; isolation: isolate;
+    }
+    .game:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.22); }
+    .game.soon { opacity: 0.62; }
+    .game.soon:hover { transform: none; }
+
+    .cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg2); }
+    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.3s; }
+    .game:hover .cover img { transform: scale(1.04); }
+    .cover.ph { display: flex; align-items: center; justify-content: center; font-size: 60px; }
+    .cover.ph.faz { background: linear-gradient(135deg, #2a1810, #4a1f1f); }
+
+    .tag {
+        position: absolute; top: 12px; left: 12px; z-index: 2;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+        padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45); border: 1px solid var(--border);
+    }
+    .tag.live { color: #74e08f; }
+    .tag.wip { color: #ffcf66; }
+
+    .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+    .body h3 { margin: 0 0 6px; font-size: 20px; font-weight: 700; }
+    .body p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.55; flex: 1; }
+    .play {
+        align-self: flex-start; font-weight: 600; font-size: 14px; padding: 9px 20px; border-radius: 11px;
+        background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #fff; transition: 0.15s;
+    }
+    .game:hover .play { box-shadow: 0 8px 24px rgba(109, 139, 255, 0.35); }
+    .play.disabled { background: rgba(255, 255, 255, 0.08); color: var(--muted); cursor: default; }
+
+    footer { text-align: center; color: var(--muted); margin-top: 60px; font-size: 13px; }
+
+    @media (max-width: 560px) {
+        .grid { grid-template-columns: 1fr; }
+        header .who span { display: none; }
+    }
+</style>
+</head>
+<body>
+    <div class="glow"></div>
+    <div class="wrap">
+        <header>
+            <a class="me" href="https://github.com/Emrecan45" target="_blank" rel="noopener">
+                <img src="https://github.com/Emrecan45.png" alt="Emrecan45">
+                <span class="who"><b>Emrecan45</b><span data-i18n="role">Indie game dev</span></span>
+            </a>
+            <span class="spacer"></span>
+            <button class="nav-btn" id="lang-btn" onclick="toggleLang()">FR</button>
+            <a class="nav-btn" href="https://github.com/Emrecan45" target="_blank" rel="noopener">GitHub</a>
+        </header>
+
+        <section class="hero">
+            <h1 data-i18n="title">My Games</h1>
+            <p data-i18n="intro">A collection of games I build for fun. Play them right here in your browser, no download needed.</p>
+        </section>
+
+        <section class="grid">
+            <a class="game" href="https://emrecan45.github.io/ColorMage/" target="_blank" rel="noopener">
+                <div class="cover">
+                    <span class="tag live" data-i18n="playable">● Playable</span>
+                    <img src="https://emrecan45.github.io/ColorMage/screenshot_game.png" alt="ColorMage">
+                </div>
+                <div class="body">
+                    <h3>ColorMage</h3>
+                    <p data-i18n="cm_desc">A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.</p>
+                    <span class="play" data-i18n="play">Play now</span>
+                </div>
+            </a>
+
+            <div class="game soon">
+                <div class="cover ph faz">
+                    <span class="tag wip" data-i18n="soon_tag">● Coming soon</span>
+                    🐻
+                </div>
+                <div class="body">
+                    <h3>Fazbear Collection</h3>
+                    <p data-i18n="faz_desc">Collect, equip and customize your favorite animatronics. Web version on the way.</p>
+                    <span class="play disabled" data-i18n="soon">Coming soon</span>
+                </div>
+            </div>
+        </section>
+
+        <footer data-i18n="footer">Made by Emrecan45 · Hosted on GitHub Pages</footer>
+    </div>
+
+    <script>
+        var i18n = {
+            en: {
+                role: "Indie game dev",
+                title: "My Games",
+                intro: "A collection of games I build for fun. Play them right here in your browser, no download needed.",
+                playable: "● Playable",
+                cm_desc: "A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.",
+                play: "Play now",
+                soon_tag: "● Coming soon",
+                faz_desc: "Collect, equip and customize your favorite animatronics. Web version on the way.",
+                soon: "Coming soon",
+                footer: "Made by Emrecan45 · Hosted on GitHub Pages"
+            },
+            fr: {
+                role: "Developpeur de jeux",
+                title: "Mes Jeux",
+                intro: "Une collection de jeux que je cree pour le plaisir. Jouez-y directement dans votre navigateur, sans rien telecharger.",
+                playable: "● Jouable",
+                cm_desc: "Un jeu de plateforme-puzzle ou un mage change de couleur et traverse tout ce qui ne correspond pas a sa teinte.",
+                play: "Jouer",
+                soon_tag: "● Bientot",
+                faz_desc: "Collectionnez, equipez et personnalisez vos animatroniques preferes. Version web bientot disponible.",
+                soon: "Bientot",
+                footer: "Realise par Emrecan45 · Heberge sur GitHub Pages"
+            }
+        };
+
+        function applyLang(lang) {
+            var dict = i18n[lang] || i18n.en;
+            document.querySelectorAll("[data-i18n]").forEach(function (el) {
+                var key = el.getAttribute("data-i18n");
+                if (dict[key]) el.textContent = dict[key];
+            });
+            document.documentElement.lang = lang;
+            document.getElementById("lang-btn").textContent = lang === "en" ? "FR" : "EN";
+        }
+
+        function toggleLang() {
+            var current = localStorage.getItem("hub_lang") || "en";
+            var next = current === "en" ? "fr" : "en";
+            localStorage.setItem("hub_lang", next);
+            applyLang(next);
+        }
+
+        applyLang(localStorage.getItem("hub_lang") || "en");
+    </script>
+</body>
+</html>
