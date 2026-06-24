@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emrecan45 - Games</title>
+<title>Emrecan45</title>
 <meta name="description" content="Indie games by Emrecan45. Play them right in your browser.">
-<link rel="icon" href="https://github.com/Emrecan45.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341302313151709" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -85,10 +85,12 @@
 
     .tag {
         position: absolute; top: 12px; left: 12px; z-index: 2;
+        display: inline-flex; align-items: center; gap: 6px; line-height: 1;
         font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
         padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(6px);
         background: rgba(0, 0, 0, 0.45); border: 1px solid var(--border);
     }
+    .tag .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; position: relative; top: 0.5px; }
     .tag.live { color: #74e08f; }
     .tag.wip { color: #ffcf66; }
 
@@ -130,7 +132,7 @@
         <section class="grid">
             <a class="game" href="https://emrecan45.github.io/ColorMage/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live" data-i18n="playable">● Playable</span>
+                    <span class="tag live"><span class="dot"></span><span data-i18n="playable">Playable</span></span>
                     <img src="https://emrecan45.github.io/ColorMage/screenshot_game.png" alt="ColorMage">
                 </div>
                 <div class="body">
@@ -142,7 +144,7 @@
 
             <a class="game" href="https://emrecan45.github.io/fazbear-collection/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live" data-i18n="playable">● Playable</span>
+                    <span class="tag live"><span class="dot"></span><span data-i18n="playable">Playable</span></span>
                     <img src="https://emrecan45.github.io/fazbear-collection/assets/img/Accueil.jpg" alt="Fazbear Collection">
                 </div>
                 <div class="body">
@@ -160,7 +162,7 @@
                 role: "Student developer",
                 title: "My Games",
                 intro: "A collection of games I build for fun. Play them right here in your browser, no download needed.",
-                playable: "● Playable",
+                playable: "Playable",
                 cm_desc: "A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.",
                 play: "Play now",
                 soon_tag: "● Coming soon",
@@ -172,7 +174,7 @@
                 role: "Développeur étudiant",
                 title: "Mes jeux",
                 intro: "Une collection de jeux que je cree pour le plaisir. Jouez-y directement dans votre navigateur, sans rien telecharger.",
-                playable: "● Jouable",
+                playable: "Jouable",
                 cm_desc: "Un jeu de plateforme-puzzle ou un mage change de couleur et traverse tout ce qui ne correspond pas a sa teinte.",
                 play: "Jouer",
                 soon_tag: "● Bientot",
