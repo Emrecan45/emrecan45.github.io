@@ -61,7 +61,7 @@
         background: linear-gradient(120deg, #fff 30%, #9fb4ff 70%, #c9a9ff);
         -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .hero p { font-size: 18px; color: var(--muted); margin: 0; max-width: 560px; line-height: 1.6; }
+    .hero p { font-size: 18px; color: var(--muted); margin: 0; line-height: 1.6; }
 
     .grid {
         display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -116,11 +116,10 @@
         <header>
             <a class="me" href="https://github.com/Emrecan45" target="_blank" rel="noopener">
                 <img src="https://github.com/Emrecan45.png" alt="Emrecan45">
-                <span class="who"><b>Emrecan45</b><span data-i18n="role">Indie game dev</span></span>
+                <span class="who"><b>Emrecan45</b><span data-i18n="role">Student developer</span></span>
             </a>
             <span class="spacer"></span>
             <button class="nav-btn" id="lang-btn" onclick="toggleLang()">FR</button>
-            <a class="nav-btn" href="https://github.com/Emrecan45" target="_blank" rel="noopener">GitHub</a>
         </header>
 
         <section class="hero">
@@ -153,14 +152,12 @@
                 </div>
             </a>
         </section>
-
-        <footer data-i18n="footer">Made by Emrecan45 · Hosted on GitHub Pages</footer>
     </div>
 
     <script>
         var i18n = {
             en: {
-                role: "Indie game dev",
+                role: "Student developer",
                 title: "My Games",
                 intro: "A collection of games I build for fun. Play them right here in your browser, no download needed.",
                 playable: "● Playable",
@@ -172,8 +169,8 @@
                 footer: "Made by Emrecan45 · Hosted on GitHub Pages"
             },
             fr: {
-                role: "Developpeur de jeux",
-                title: "Mes Jeux",
+                role: "Développeur étudiant",
+                title: "Mes jeux",
                 intro: "Une collection de jeux que je cree pour le plaisir. Jouez-y directement dans votre navigateur, sans rien telecharger.",
                 playable: "● Jouable",
                 cm_desc: "Un jeu de plateforme-puzzle ou un mage change de couleur et traverse tout ce qui ne correspond pas a sa teinte.",
