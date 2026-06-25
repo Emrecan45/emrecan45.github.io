@@ -54,7 +54,7 @@
     }
     header .nav-btn:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
 
-    .hero { padding: 40px 0 30px; }
+    .hero { padding: 30px 0 0; }
     .hero h1 {
         font-size: clamp(34px, 6vw, 60px); font-weight: 800; letter-spacing: -1.5px;
         margin: 0 0 14px; line-height: 1.05;
@@ -65,7 +65,7 @@
 
     .grid {
         display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 22px; margin-top: 36px;
+        gap: 22px; margin-top: 30px;
     }
 
     .game {
@@ -90,7 +90,7 @@
         padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(6px);
         background: rgba(0, 0, 0, 0.45); border: 1px solid var(--border);
     }
-    .tag .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; position: relative; top: 0.5px; }
+    .tag .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; position: relative; }
     .tag.live { color: #74e08f; }
     .tag.wip { color: #ffcf66; }
 
@@ -141,10 +141,10 @@
         </section>
 
         <section class="grid">
-            <a class="game" href="https://emrecan45.github.io/ColorMage/" target="_blank" rel="noopener">
+            <a class="game" href="https://emrecan45.github.io/colormage/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span data-i18n="playable">Playable</span></span>
-                    <img src="https://emrecan45.github.io/ColorMage/screenshot_game.png" alt="ColorMage">
+                    <span class="tag live"><span class="dot"></span><span data-i18n="online">Online</span></span>
+                    <img src="https://emrecan45.github.io/colormage/screenshot_game.png" alt="ColorMage">
                 </div>
                 <div class="body">
                     <h3>ColorMage</h3>
@@ -155,7 +155,7 @@
 
             <a class="game" href="https://emrecan45.github.io/fazbear-collection/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span data-i18n="playable">Playable</span></span>
+                    <span class="tag live"><span class="dot"></span><span data-i18n="online">Online</span></span>
                     <img src="https://emrecan45.github.io/fazbear-collection/assets/img/Accueil.jpg" alt="Fazbear Collection">
                 </div>
                 <div class="body">
@@ -165,15 +165,34 @@
                 </div>
             </a>
         </section>
+
+        <section class="hero">
+            <h1 data-i18n="sites_title">My Websites</h1>
+            <p data-i18n="sites_intro">Web projects and sites I have built.</p>
+        </section>
+
+        <section class="grid">
+            <a class="game" href="https://optibardage.com" target="_blank" rel="noopener">
+                <div class="cover">
+                    <span class="tag live"><span class="dot"></span><span data-i18n="online">Online</span></span>
+                    <img src="optibardage-hq.png" alt="OPTIBARDAGE">
+                </div>
+                <div class="body">
+                    <h3>OPTIBARDAGE</h3>
+                    <p data-i18n="opti_desc">Corporate website for an external cladding company.</p>
+                    <span class="play" data-i18n="visit">Visit site</span>
+                </div>
+            </a>
+        </section>
     </div>
 
     <script>
         var i18n = {
             en: {
                 role: "Student developer",
-                title: "My Games",
+                title: "My games",
                 intro: "A collection of games I build for fun. Play them right here in your browser, no download needed.",
-                playable: "Playable",
+                online: "Online",
                 cm_desc: "A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.",
                 play: "Play now",
                 soon_tag: "● Coming soon",
@@ -183,23 +202,31 @@
                 coffee: "Buy me a coffee",
                 coffee_title: "Buy me a coffee",
                 coffee_desc: "Thanks for the support! Pick an amount, it lands straight on my account.",
-                coffee_other: "Other"
+                coffee_other: "Other",
+                sites_title: "My websites",
+                sites_intro: "Web projects and sites I have built.",
+                visit: "Visit site",
+                opti_desc: "Custom web platform and management tool for a metal cladding company."
             },
             fr: {
                 role: "Développeur étudiant",
                 title: "Mes jeux",
-                intro: "Une collection de jeux que je cree pour le plaisir. Jouez-y directement dans votre navigateur, sans rien telecharger.",
-                playable: "Jouable",
-                cm_desc: "Un jeu de plateforme-puzzle ou un mage change de couleur et traverse tout ce qui ne correspond pas a sa teinte.",
+                intro: "Une collection de jeux que je crée pour le plaisir. Jouez-y directement dans votre navigateur, sans rien télécharger.",
+                online: "En ligne",
+                cm_desc: "Un jeu de plateforme-puzzle où un mage change de couleur et traverse tout ce qui ne correspond pas à sa teinte.",
                 play: "Jouer",
-                soon_tag: "● Bientot",
-                faz_desc: "Collectionnez, equipez et personnalisez vos animatroniques preferes de l'univers FNaF.",
-                soon: "Bientot",
-                footer: "Realise par Emrecan45 · Heberge sur GitHub Pages",
+                soon_tag: "● Bientôt",
+                faz_desc: "Collectionnez, équipez et personnalisez vos animatroniques préférés de l'univers FNaF.",
+                soon: "Bientôt",
+                footer: "Réalisé par Emrecan45 · Hébergé sur GitHub Pages",
                 coffee: "Offrir un café",
                 coffee_title: "Offrir un café",
                 coffee_desc: "Merci du soutien ! Choisis un montant, ça arrive direct sur mon compte.",
-                coffee_other: "Autre"
+                coffee_other: "Autre",
+                sites_title: "Mes sites",
+                sites_intro: "Projets web et sites que j'ai réalisés.",
+                visit: "Visiter le site",
+                opti_desc: "Plateforme web et outil de gestion sur mesure pour une entreprise de bardage métallique."
             }
         };
 
