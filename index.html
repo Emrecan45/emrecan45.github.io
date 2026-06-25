@@ -106,9 +106,19 @@
 
     footer { text-align: center; color: var(--muted); margin-top: 60px; font-size: 13px; }
 
+    .coffee-btn {
+        display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none;
+        font-family: inherit; font-size: 14px;
+        color: var(--muted); padding: 8px 15px; border-radius: 10px;
+        border: 1px solid var(--border); transition: 0.15s; background: none;
+    }
+    .coffee-btn:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
+
     @media (max-width: 560px) {
         .grid { grid-template-columns: 1fr; }
         header .who span { display: none; }
+        .coffee-txt { display: none; }
+        .coffee-btn { padding: 8px 11px; }
     }
 </style>
 </head>
@@ -121,6 +131,7 @@
                 <span class="who"><b>Emrecan45</b><span data-i18n="role">Student developer</span></span>
             </a>
             <span class="spacer"></span>
+            <a class="coffee-btn" href="https://revolut.me/emrecan45" target="_blank" rel="noopener">☕<span class="coffee-txt" data-i18n="coffee">Buy me a coffee</span></a>
             <button class="nav-btn" id="lang-btn" onclick="toggleLang()">FR</button>
         </header>
 
@@ -168,7 +179,11 @@
                 soon_tag: "● Coming soon",
                 faz_desc: "Collect, equip and customize your favorite animatronics from the FNaF universe.",
                 soon: "Coming soon",
-                footer: "Made by Emrecan45 · Hosted on GitHub Pages"
+                footer: "Made by Emrecan45 · Hosted on GitHub Pages",
+                coffee: "Buy me a coffee",
+                coffee_title: "Buy me a coffee",
+                coffee_desc: "Thanks for the support! Pick an amount, it lands straight on my account.",
+                coffee_other: "Other"
             },
             fr: {
                 role: "Développeur étudiant",
@@ -180,7 +195,11 @@
                 soon_tag: "● Bientot",
                 faz_desc: "Collectionnez, equipez et personnalisez vos animatroniques preferes de l'univers FNaF.",
                 soon: "Bientot",
-                footer: "Realise par Emrecan45 · Heberge sur GitHub Pages"
+                footer: "Realise par Emrecan45 · Heberge sur GitHub Pages",
+                coffee: "Offrir un café",
+                coffee_title: "Offrir un café",
+                coffee_desc: "Merci du soutien ! Choisis un montant, ça arrive direct sur mon compte.",
+                coffee_other: "Autre"
             }
         };
 
