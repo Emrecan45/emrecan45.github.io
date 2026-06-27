@@ -78,7 +78,7 @@
     .game.soon:hover { transform: none; }
 
     .cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg2); }
-    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.3s; }
+    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; will-change: transform; transform: scale(1.001); backface-visibility: hidden; }
     .game:hover .cover img { transform: scale(1.04); }
     .cover.ph { display: flex; align-items: center; justify-content: center; font-size: 60px; }
     .cover.ph.faz { background: linear-gradient(135deg, #2a1810, #4a1f1f); }
@@ -148,7 +148,7 @@
                 </div>
                 <div class="body">
                     <h3>ColorMage</h3>
-                    <p data-i18n="cm_desc">A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.</p>
+                    <p data-i18n="cm_desc">A platform-puzzle game where you shift colors to survive each level.</p>
                     <span class="play" data-i18n="play">Play now</span>
                 </div>
             </a>
@@ -193,7 +193,7 @@
                 title: "My games",
                 intro: "A collection of games I build for fun. Play them right here in your browser, no download needed.",
                 online: "Online",
-                cm_desc: "A platform-puzzle game where a color-shifting mage phases through anything that doesn't match its hue.",
+                cm_desc: "A platform-puzzle game where you shift colors to survive each level.",
                 play: "Play now",
                 soon_tag: "● Coming soon",
                 faz_desc: "Collect, equip and customize your favorite animatronics from the FNaF universe.",
