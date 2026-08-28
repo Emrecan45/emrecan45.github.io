@@ -96,7 +96,6 @@
     .cover.ph.faz { background: linear-gradient(135deg, #2a1810, #4a1f1f); }
 
     .tag {
-        position: absolute; top: 12px; left: 12px; z-index: 2;
         display: inline-flex; align-items: center; gap: 6px; line-height: 1;
         font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
         padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(6px);
@@ -109,7 +108,8 @@
     .tag.off .dot { box-shadow: 0 0 8px rgba(231, 76, 60, 0.6); }
 
     .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
-    .body h3 { margin: 0 0 6px; font-size: 20px; font-weight: 700; }
+    .title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .title-row h3 { margin: 0; font-size: 20px; font-weight: 700; }
     .body p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.55; flex: 1; }
     .play {
         align-self: flex-start; font-weight: 600; font-size: 14px; padding: 9px 20px; border-radius: 11px;
@@ -159,23 +159,27 @@
         <section class="grid">
             <a class="game" data-status="online" href="https://emrecan45.github.io/colormage/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span class="tag-label" data-i18n="online">Online</span></span>
-                    <img src="colormage.png" alt="ColorMage">
+<img src="colormage.png" alt="ColorMage">
                 </div>
                 <div class="body">
-                    <h3>ColorMage</h3>
+                    <div class="title-row">
+                        <h3>ColorMage</h3>
+                        
+                    </div>
                     <p data-i18n="cm_desc">A platform-puzzle game where you shift colors to survive each level.</p>
                     <span class="play" data-i18n="play">Play now</span>
                 </div>
             </a>
 
-            <a class="game" data-status="offline" href="https://y8.com/games/high_noon" target="_blank" rel="noopener">
+            <a class="game" data-status="online" href="https://y8.com/games/high_noon" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span class="tag-label" data-i18n="online">Online</span></span>
-                    <img src="high-noon.png" alt="High Noon">
+<img src="high-noon.png" alt="High Noon">
                 </div>
                 <div class="body">
-                    <h3>High Noon</h3>
+                    <div class="title-row">
+                        <h3>High Noon</h3>
+                        
+                    </div>
                     <p data-i18n="hn_desc">A first-person 3D western duel. Draw faster than your opponent, climb the leaderboard and live the story mode.</p>
                     <span class="play" data-i18n="play">Play now</span>
                 </div>
@@ -190,11 +194,13 @@
         <section class="grid">
             <a class="game" data-status="online" href="https://optibardage.com" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span class="tag-label" data-i18n="online">Online</span></span>
-                    <img src="optibardage-hq.png" alt="OPTIBARDAGE">
+<img src="optibardage-hq.png" alt="OPTIBARDAGE">
                 </div>
                 <div class="body">
-                    <h3>OPTIBARDAGE</h3>
+                    <div class="title-row">
+                        <h3>OPTIBARDAGE</h3>
+                        
+                    </div>
                     <p data-i18n="opti_desc">Corporate website for an external cladding company.</p>
                     <span class="play" data-i18n="visit">Visit site</span>
                 </div>
@@ -202,11 +208,13 @@
 
             <a class="game" data-status="online" href="https://emrecan45.github.io/fazbear-collection/" target="_blank" rel="noopener">
                 <div class="cover">
-                    <span class="tag live"><span class="dot"></span><span class="tag-label" data-i18n="online">Online</span></span>
-                    <img src="https://emrecan45.github.io/fazbear-collection/assets/img/Accueil.jpg" alt="Fazbear Collection">
+<img src="https://emrecan45.github.io/fazbear-collection/assets/img/Accueil.jpg" alt="Fazbear Collection">
                 </div>
                 <div class="body">
-                    <h3>Fazbear Collection</h3>
+                    <div class="title-row">
+                        <h3>Fazbear Collection</h3>
+                        
+                    </div>
                     <p data-i18n="faz_desc">Collect, equip and customize your favorite animatronics from the FNaF universe.</p>
                     <span class="play" data-i18n="visit">Visit site</span>
                 </div>
@@ -309,3 +317,5 @@
     </script>
 </body>
 </html>
+
+
